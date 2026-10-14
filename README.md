@@ -1,2 +1,54 @@
-# inverter-pwm-experimental-validation
-Practical implementation and experimental validation of square-wave, phase-shifted and two-/three-level sinusoidal PWM inverter modulation.
+# Inverter Modulation and PWM
+
+Practical implementation and experimental validation of inverter modulation: square-wave, phase-shifted and two-/three-level sinusoidal PWM, with waveform and harmonic analysis.
+
+## Practical implementation and experimental validation
+
+- Implemented and compared inverter modulation strategies during laboratory experiments.
+- Recorded voltage/current waveforms and spectra for square-wave and phase-shifted operation.
+- Compared two-level and three-level sinusoidal PWM waveforms.
+- Analysed RMS voltage, the fundamental component and total harmonic distortion (THD).
+- Investigated modulation-index, switching-frequency and load-inductance effects, and compared measurements with Simulink results.
+
+The practical measurements and simulation outputs are identified separately in the French report. The image below is a simulation diagram, not a photograph of the physical setup.
+
+![Simulation diagram](simulation-diagram.png)
+
+### Experimental waveform capture
+
+![Experimental oscilloscope waveforms](experimental-waveforms.png)
+
+Recorded waveforms from the practical implementation (see the French report for the operating conditions).
+
+## Repository contents
+
+| File | Purpose |
+| --- | --- |
+| [inverter-pwm-report-fr.pdf](inverter-pwm-report-fr.pdf) | Full French report: experimental setup, measurements, calculations and simulation comparisons. |
+| [results-and-waveforms.zip](results-and-waveforms.zip) | Complete archive of the supplied diagrams, waveforms and spectra. |
+| [simulation-diagram.png](simulation-diagram.png) | Simulation diagram preview shown below. |
+| [inverter_pwm.slx](inverter_pwm.slx) | Editable Simulink model. |
+
+## Getting started
+
+1. Read the French report to understand the circuit, operating conditions and measurement protocol.
+2. Extract `results-and-waveforms.zip` to inspect the recorded results and simulation figures.
+3. Open `inverter_pwm.slx` in MATLAB/Simulink and inspect the configured circuit and parameters before running it.
+4. Use the report to select the operating case to reproduce and compare the voltage/current waveforms.
+
+## Software requirements
+
+MATLAB is required for `.m` scripts. Simulink and the power-system blocks used by the model are required for `.slx` files. Some analytical scripts use `syms`/`vpasolve` and therefore require Symbolic Math Toolbox. The exact original MATLAB release is not specified; model compatibility should be checked in your installation.
+
+## Project context
+
+Academic power-electronics project completed at the National Polytechnic School of Algiers in 2024/2025, including practical laboratory work and simulation. This repository presents Amani Mouaad’s portfolio version of a collaborative academic project.
+
+**Portfolio author:** Amani Mouaad  
+**Supervision:** Pr. M. Mahmoudi and Mr. Benachour.
+
+The technical report is retained in French. Repository documentation is in English. The original source documents are preserved separately.
+
+## Reproducibility
+
+The supplied models and scripts are preserved for inspection and reproduction. They have not been rerun in MATLAB/Simulink during repository preparation; published experimental observations come from the supplied report and results.
